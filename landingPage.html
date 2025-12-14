@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================= THEME VARIABLES ================= */
+        :root {
+            --bg: #f7f7f7;
+            --bg2: #ffffff;
+            --text: #222;
+            --muted: #555;
+            --card: #ffffff;
+            --border: #dddddd;
+            --accent: #111;
+        }
+
+        /* Dark Mode */
+        body.dark {
+            --bg: #0f0f0f;
+            --bg2: #161616;
+            --text: #f2f2f2;
+            --muted: #aaaaaa;
+            --card: #1e1e1e;
+            --border: #2a2a2a;
+            --accent: #ffffff;
+        }
+
+        /* ================= GLOBAL ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            transition: 0.3s;
+        }
+
+        /* ================= HERO ================= */
+        header {
+            background: var(--accent);
+            color: var(--bg);
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.85;
+        }
+
+        /* THEME TOGGLE (ICON ONLY) */
+        .toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--bg);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+            border: 1px solid var(--border);
+        }
+
+        /* BUTTON */
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: var(--bg);
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        /* ================= SECTIONS ================= */
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* ================= FEATURES ================= */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .feature {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        /* ================= STATS ================= */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .stat {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .stat h3 {
+            font-size: 36px;
+        }
+
+        /* ================= STEPS ================= */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .step {
+            background: var(--accent);
+            color: var(--bg);
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        /* ================= FORM ================= */
+        .form-section {
+            background: var(--bg2);
+        }
+
+        form {
+            max-width: 450px;
+            margin: 40px auto 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input {
+            padding: 14px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--card);
+            color: var(--text);
+        }
+
+        form button {
+            padding: 14px;
+            border: none;
+            background: var(--accent);
+            color: var(--bg);
+            font-size: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            background: var(--accent);
+            color: var(--bg);
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <header>
+        <div class="toggle" onclick="toggleTheme()" title="Toggle theme">🌙</div>
+
+        <h1>Turn Visitors Into Leads</h1>
+        <p>
+            A focused landing page designed to convert visitors into leads
+            using clear messaging, trust elements, and a simple sign-up form.
+        </p>
+        <a href="#signup" class="btn">Get Started</a>
+    </header>
+
+    <!-- FEATURES -->
+    <section>
+        <div class="container">
+            <h2>Why This Landing Page Works</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Single Goal Focus</h3>
+                    <p>Encourages users to take one clear action.</p>
+                </div>
+                <div class="feature">
+                    <h3>Responsive Design</h3>
+                    <p>Optimized for mobile, tablet, and desktop screens.</p>
+                </div>
+                <div class="feature">
+                    <h3>Dark Mode Support</h3>
+                    <p>Improves accessibility and user comfort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section>
+        <div class="container">
+            <h2>Trusted & Effective</h2>
+            <div class="stats">
+                <div class="stat">
+                    <h3>98%</h3>
+                    <p>User Satisfaction</p>
+                </div>
+                <div class="stat">
+                    <h3>2×</h3>
+                    <p>Higher Conversions</p>
+                </div>
+                <div class="stat">
+                    <h3>100%</h3>
+                    <p>Responsive</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEPS -->
+    <section>
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>Step 1</h3>
+                    <p>Understand the value offered on the page.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 2</h3>
+                    <p>Enter your basic details in the form.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 3</h3>
+                    <p>Get updates or early access instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="form-section" id="signup">
+        <div class="container">
+            <h2>Get Early Access</h2>
+            <p style="text-align:center;color:var(--muted);">
+                Enter your details and stay connected.
+            </p>
+
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Landing Page Project | HTML • CSS • JavaScript
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark");
+            document.querySelector(".toggle").textContent =
+                document.body.classList.contains("dark") ? "☀️" : "🌙";
+        }
+    </script>
+
+</body>
+
+</html>
